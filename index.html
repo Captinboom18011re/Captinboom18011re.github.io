@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impact of Technology on the Environment</title>
+  <style>
+    /* Basic styles */
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+    header { background: #2c3e50; color: #fff; padding: 1em 0; text-align: center; }
+    h1 { font-size: 2em; margin: 0; }
+    nav { background: #34495e; padding: 10px; display: flex; justify-content: center; gap: 15px; }
+    nav a { color: #fff; text-decoration: none; padding: 10px; transition: background 0.3s; }
+    nav a:hover { background: #2c3e50; }
+    .section { padding: 2em; max-width: 1000px; margin: 0 auto; }
+    .content-section { margin: 1.5em 0; padding: 1.5em; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .accordion { cursor: pointer; padding: 1em; border: 1px solid #ddd; margin-top: 10px; background: #ecf0f1; }
+    .accordion.active, .accordion:hover { background-color: #dce1e3; }
+    .panel { display: none; padding: 1em; background: #f9f9f9; border: 1px solid #ddd; }
+    .modal { display: none; position: fixed; z-index: 100; padding: 20px; background-color: rgba(0, 0, 0, 0.5); top: 0; left: 0; width: 100%; height: 100%; }
+    .modal-content { margin: 5% auto; background: white; padding: 20px; width: 90%; max-width: 600px; border-radius: 10px; }
+    .close-btn { float: right; font-size: 24px; cursor: pointer; }
+    footer { background: #2c3e50; color: #fff; padding: 1em; text-align: center; }
+    footer h3 { margin-top: 0; }
+    footer p { margin: 0.5em 0; }
+    /* Responsive */
+    @media (max-width: 600px) { nav { flex-direction: column; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Impact of Technology on the Environment</h1>
+</header>
+
+<nav>
+  <a href="#intro">Introduction</a>
+  <a href="#positive">Positive Impact</a>
+  <a href="#negative">Negative Impact</a>
+  <a href="#solutions">Solutions</a>
+</nav>
+
+<!-- Introduction Section -->
+<section id="intro" class="section content-section">
+  <h2>Introduction</h2>
+  <p>Technology has changed the way we live and connect, bringing big advancements but also affecting the environment. It’s important to understand both the benefits and the challenges to create a more sustainable future.</p>
+  <img src="earth.jpg" alt="Introduction Image" style="width:100%; max-width: 400px;"/>
+</section>
+
+<!-- Positive Impact Section -->
+<section id="positive" class="section content-section">
+  <h2>Positive Impact of Technology on the Environment</h2>
+  <button class="accordion">Renewable Energy Innovations</button>
+  <div class="panel">
+    <p>Technology has made renewable energy sources, like solar and wind power, more powerful and affordable. Solar panels and wind turbines help reduce our reliance on fossil fuels, lowering pollution and greenhouse gases.</p>
+    <img src="renew.avif" alt="Positive Impact Image 1" style="width:100%; max-width: 400px;"/>
+  </div>
+  <button class="accordion">Conservation Efforts and Environmental Monitoring</button>
+  <div class="panel">
+    <p>Satellites, drones, and sensors are used to monitor deforestation, pollution, and endangered species. This technology allows scientists to protect wildlife, track pollution, and respond faster to environmental problems.</p>
+    <img src="r.jpg" alt="Positive Impact Image 2" style="width:100%; max-width: 400px;"/>
+  </div>
+</section>
+
+<!-- Negative Impact Section -->
+<section id="negative" class="section content-section">
+  <h2>Negative Impact of Technology on the Environment</h2>
+  <button class="accordion">E-Waste and Resource Consumption</button>
+  <div class="panel">
+    <p>Upgrading devices leads to electronic waste, or e-waste, which can release harmful chemicals if not disposed of properly. Producing electronics also requires mining rare metals and uses a lot of water and energy, adding to environmental strain.</p>
+    <img src="e.jpg" alt="Negative Impact Image 1" style="width:100%; max-width: 400px;"/>
+  </div>
+  <button class="accordion">Energy Consumption of Data Centers and Blockchain</button>
+  <div class="panel">
+    <p>Data centers and blockchain technology consume huge amounts of energy, especially when powered by non-renewable sources. This high energy demand contributes to pollution and climate change, making energy efficiency critical.</p>
+    <img src="data.jpg" alt="Negative Impact Image 2" style="width:100%; max-width: 400px;"/>
+  </div>
+</section>
+
+<!-- Solutions Section -->
+<section id="solutions" class="section content-section">
+  <h2>Solutions for a Sustainable Tech Future</h2>
+  <button onclick="openModal()">See Case Study</button>
+  <p>Some tech companies are switching to renewable energy, recycling old devices, or creating energy-efficient products. These changes can make a big difference by reducing waste and lowering emissions.</p>
+  <img src="re.jpg" alt="Solutions Image" style="width:100%; max-width: 400px;"/>
+</section>
+
+<!-- Modal for Case Study -->
+<div id="caseStudyModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h3>Case Study</h3>
+    <p>Recycling programs, energy-efficient device designs, and better consumer choices can reduce tech’s environmental impact. Governments, companies, and individuals all play a role in creating a more eco-friendly tech future.</p>
+  </div>
+</div>
+
+<!-- Footer with Sources -->
+<footer>
+  <h3>Sources</h3>
+  <p><a href="https://www.iea.org/reports/renewables-2022" target="_blank" style="color: #fff;">International Energy Agency - Renewables 2022</a></p>
+  <p><a href="https://www.unep.org/resources/emerging-issues/e-waste" target="_blank" style="color: #fff;">UN Environment Programme - E-Waste</a></p>
+  <p><a href="https://www.scientificamerican.com/article/how-drones-help-protect-the-environment/" target="_blank" style="color: #fff;">Scientific American - How Drones Help Protect the Environment</a></p>
+  <p><a href="https://www.nrdc.org/issues/clean-energy" target="_blank" style="color: #fff;">NRDC - Clean Energy</a></p>
+</footer>
+
+<script>
+  // Accordion functionality
+  const accordions = document.querySelectorAll(".accordion");
+  accordions.forEach(acc => {
+    acc.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+
+  // Modal functionality
+  function openModal() {
+    document.getElementById("caseStudyModal").style.display = "block";
+  }
+  function closeModal() {
+    document.getElementById("caseStudyModal").style.display = "none";
+  }
+  window.onclick = function(event) {
+    const modal = document.getElementById("caseStudyModal");
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
